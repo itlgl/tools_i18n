@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.itlgl.tools.i18n'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'dom4j:dom4j:1.6.1'
+}
