@@ -25,7 +25,7 @@ public class Main {
     String translatePlatform = "baidu";
     String translateAppId = "";
     String translateAppKey = "";
-    String translateAppUrl = "https://api.fanyi.baidu.com/api/trans/vip/i18n";
+    // String translateAppUrl = "https://api.fanyi.baidu.com/api/trans/vip/i18n";
     // ------
 
     private Translator translator;

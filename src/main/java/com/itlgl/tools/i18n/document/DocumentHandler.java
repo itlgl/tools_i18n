@@ -82,11 +82,10 @@ public abstract class DocumentHandler {
                         e.printStackTrace();
                     }
                 }
-                if (translateResult == null) {
-                    translateResult = "";
-                }
 
-                translatorDocument.getDestMap().put(key, translateResult);
+                if(translateResult != null) {
+                    translatorDocument.getDestMap().put(key, translateResult);
+                }
             }
 
         }

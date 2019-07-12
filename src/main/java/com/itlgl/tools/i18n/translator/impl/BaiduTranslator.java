@@ -47,6 +47,8 @@ import java.util.Random;
  * vie 	越南语
  */
 public class BaiduTranslator extends BaseTranslator {
+    private static final String TRANSLATE_URL = "http://api.fanyi.baidu.com/api/trans/vip/translate";
+
     Map<Language, String> languageMap = new HashMap<>();
     {
         languageMap.put(Language.zh_CN, "zh");
@@ -56,12 +58,14 @@ public class BaiduTranslator extends BaseTranslator {
         languageMap.put(Language.ko_KR, "kor");
     }
 
-    public BaiduTranslator(String translateAppId, String translateAppKey, String translateAppUrl) {
-        super(translateAppId, translateAppKey, translateAppUrl);
+    public BaiduTranslator(String translateAppId, String translateAppKey) {
+        super(translateAppId, translateAppKey, TRANSLATE_URL);
     }
 
     @Override
     public String translate(String src, Language sourceLanguage, Language destLanguage) throws Exception {
+        Thread.sleep(1000);
+
         Random random = new Random();
         int randomInt = random.nextInt();
 
